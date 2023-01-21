@@ -1,16 +1,16 @@
-# <h1><img src="subnauticaSync.ico" style="width: 50px;">  subnauticaSaves : </h1> &ensp; Est un petit script batch, utilisé pour synchroniser les sauvegardes du jeu subnautica (version EpicGames) via un repository git. Cet outil peut être détourné pour pouvoir synchronyser tous types de fichiers : il suffira de changer la variable "savePATH" pour sauvegarder tous les fichiers situés à ce chemin.
+# <h1><img src="subnauticaSync.ico" style="width: 50px;">  subnauticaSaves : </h1> &ensp; Is a small batch script, used to synchronize the saves of the game subnautica (EpicGames version) via a Git repository. This tool can also be modified to synchronize all types of files and folders: you just have to specify the path to the folder you want to save and the link to your git repository.
 <br><br>
 
-<h2>Mise en place : </h2> &ensp; 
-<br>- Créez un repository git, <b><ins>SANS README.md</ins></b>
-<br>- Placer le script dans le dossier à sauvegarder n'est pas obligatoire, mais recommandé car des fichiers externes seront créés.
-<br>- Lancez le script et renseignez le lien de votre dépot git dans la fenêtre.
-<br>- Dans la fenêtre suivante, renseignez le chemin vers lequel se diriger pour sauvegarder. 
-<br>- Lancer le script suffira à faire la synchronisation souhaitée ou dans le cas de l'initialisation, un premier envoi de vos fichiers et la création des fichiers de configuration.
-<br>- Dans le cas ou le fichier de configuration est supprimé, les étapes de création seront répétées.
+<h2>Setup : </h2> &ensp; 
+<br>- Create a Git repository, <b><ins>WITHOUT A README.md</ins></b>
+<br>- Placing the script in the folder that should be saved is not mandatory, but strongly recommended as external files will be created.
+<br>- Run the script and enter the link to your Git repository inside the Prompt window. 
+<br>- Inside the next window, enter the path to the folder that you want to save and sync.
+<br>- Running the script will automatically synchronize your repository, or, in case running the script for the first time, send all your files and create all of the configuration files needed for the script.
+<br>- In case the configuration is deleted or not found in the folder, the creations steps will be repeated.
 <br><br>
 
-<h2>Utilisation : </h2> &ensp; Pour synchroniser, il faudra lancer l'application avant un début de session, et à la fin d'une session pour envoyer sa sauvegarde sur le repository. <b><ins>Ne pas oublier de lancer l'outil si le jeu a été lancé, même si ce n'est que pour une courte durée et qu'aucun progrès n'a été fait dans le jeu.</ins></b>
+<h2>Usage : </h2> &ensp; To synchronize, you will need to run the application before starting a session, and at the end of a session to send the save to the repository. <b><ins>Do not forget to run the tool if the game has been started, even if it is only for a short time and no progress has been made in the game.</ins></b>
 <br><br>
 
-<h2>Style : </h2> &ensp; Il est aussi possible de créer un raccourci et de changer l'icône avec celui disponible dans le repository "subnauticaSync.ico".
+<h2>Style : </h2> &ensp; It is also possible to create a shortcut and change the icon with the one available in the repository "subnauticaSync.ico".
