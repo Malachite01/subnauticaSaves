@@ -1,6 +1,35 @@
 @echo off
-set savePATH=C:\Users\%USERNAME%\AppData\LocalLow\Unknown Worlds\Subnautica\Subnautica\SavedGames
-set repositoryURL=https://github.com/Malachite01/subnauticaSaves.git
+
+if exist configSubnauticaSync (
+    goto readConfig
+) else (
+    goto createConfig
+)
+
+:readConfig
+    for /f "usebackq delims=" %%a in (configSubnauticaSync) do (
+        set savePATH=%%a
+        set /p repositoryURL=<configSubnauticaSync
+    )
+    echo Fichier de configuration detecte avec ces parametres : 
+    echo %repositoryURL%
+    echo %savePATH%
+    goto endConfig
+
+:createConfig
+    echo WScript.Echo InputBox("Entrez l'URL du repository git distant :", "Initialisation") > inputBox.vbs
+    for /f "delims=" %%a in ('cscript inputBox.vbs') do set repositoryURL=%%a
+    echo %repositoryURL%> configSubnauticaSync
+    del inputBox.vbs
+    echo WScript.Echo InputBox("Entrez le chemin du repertoire des sauvegardes :", "Initialisation") > inputBox.vbs
+    for /f "delims=" %%a in ('cscript inputBox.vbs') do set savePATH=%%a
+    echo %savePATH%>> configSubnauticaSync
+    del inputBox.vbs
+    echo /configSubnauticaSync > .gitignore
+    echo *.vbs >> .gitignore
+    goto endConfig
+
+:endConfig
 
 git ls-remote %repositoryURL% master >nul 2>&1
 if %errorlevel%==1 (
